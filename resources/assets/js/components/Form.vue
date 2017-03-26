@@ -94,7 +94,7 @@
                         <label for="remarks" class="control-label col-xs-3">Remarks 2</label>
                         <div class="col-xs-9">
                             <textarea class="w-input text-field form-control"
-                                      placeholder="maximum of 160 chars for remarks." rows="5" name="remarks" cols="50"
+                                      placeholder="maximum of 160 chars for remarks." rows="5" name="remarks2" cols="50"
                                       id="remarks2" v-model="formdata.remarks2"></textarea>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                         <label for="remarks" class="control-label col-xs-3">Remarks 3</label>
                         <div class="col-xs-9">
                             <textarea class="w-input text-field form-control"
-                                      placeholder="maximum of 160 chars for remarks." rows="5" name="remarks" cols="50"
+                                      placeholder="maximum of 160 chars for remarks." rows="5" name="remarks3" cols="50"
                                       id="remarks3" v-model="formdata.remarks3"></textarea>
                         </div>
                     </div>
