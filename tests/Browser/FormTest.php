@@ -2,9 +2,8 @@
 
 namespace Tests\Browser;
 
-use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\DuskTestCase;
 
 class FormTest extends DuskTestCase
 {
@@ -53,7 +52,7 @@ class FormTest extends DuskTestCase
                 ->type('remarks', 'This is a test remark')
                 ->type('remarks1', 'This is a test remark 1')
                 ->type('remarks2', 'This is a test remark 2')
-                ->type('remarks2', 'This is a test remark 3')
+                ->type('remarks3', 'This is a test remark 3')
                 ->check('is_active')
                 ->check('is_form')
                 ->press('Submit')
