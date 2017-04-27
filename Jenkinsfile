@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 
 node('master') {
-    stage('build') {
+    try {
+        stage('build') {
         git url: 'git@github.com:stevepopson/shipping-docker.git'
 
         // Start services (Let docker-compose build containers for testing)
@@ -17,7 +18,12 @@ node('master') {
         sh 'sed -i "s/CACHE_DRIVER=.*/CACHE_DRIVER=redis/" .env'
         sh 'sed -i "s/SESSION_DRIVER=.*/SESSION_DRIVER=redis/" .env'
     }
-    stage('test') {
-        sh "APP_ENV=testing ./develop test"
+        stage('test') {
+            sh "APP_ENV=testing ./develop test"
+        }
+    } catch(error) {
+        throw error
+    } finally {
+        sh './develop down'
     }
 }
