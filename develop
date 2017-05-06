@@ -36,7 +36,7 @@ if [ ! -z "$BUILD_NUMBER" ]; then
 fi
 
 # Create docker-compose command to run
-COMPOSE="docker-compose -f docker-compose.${COMPOSE_FILE}.yml"
+COMPOSE="/usr/local/bin/docker-compose -f docker-compose.${COMPOSE_FILE}.yml"
 
 # If we pass any arguments...
 if [ $# -gt 0 ];then
